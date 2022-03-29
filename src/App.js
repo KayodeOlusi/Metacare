@@ -1,5 +1,25 @@
 import { Line } from "react-chartjs-2";
 import "./App.css";
+import {
+	Chart as ChartJS,
+	CategoryScale,
+	LinearScale,
+	PointElement,
+	LineElement,
+	Title,
+	Tooltip,
+	Legend,
+} from "chart.js";
+
+ChartJS.register(
+	CategoryScale,
+	LinearScale,
+	PointElement,
+	LineElement,
+	Title,
+	Tooltip,
+	Legend
+);
 
 const state = {
 	labels: ["January", "February", "March", "April", "May"],
@@ -16,23 +36,23 @@ const state = {
 	],
 };
 
+const options = {
+	responsive: true,
+	plugins: {
+		legend: {
+			position: "top",
+		},
+		title: {
+			display: true,
+			text: "Chart.js Line Chart",
+		},
+	},
+};
+
 function App() {
 	return (
 		<div className="App">
-			<Line
-				data={state}
-				options={{
-					title: {
-						display: true,
-						text: "Average Rainfall per month",
-						fontSize: 20,
-					},
-					legend: {
-						display: false,
-						position: "top",
-					},
-				}}
-			/>
+			<Line options={options} datasetIdKey="id" data={state} />
 		</div>
 	);
 }
