@@ -1,24 +1,32 @@
+import { useState } from "react";
 import styled from "styled-components";
 // Icons
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 
-const SidebarOptions = ({ Icon, title }) => {
+const SidebarOptions = ({ Icon, title, options }) => {
+	const [showMenu, setShowMenu] = useState(false);
+
 	return (
 		<SidebarOption>
-			<SidebarOptionContent>
+			<SidebarOptionContent onClick={() => setShowMenu(!showMenu)}>
 				<SidebarOptionContainer>
-					{Icon && <Icon />}
-					{Icon ? <h1>{title}</h1> : <SidebarOptionName>{title}</SidebarOptionName>}
+					{Icon && <Icon className={showMenu && "sidebar__icon"} />}
+					{Icon ? (
+						<h1 className={showMenu && "sidebar__title"}>{title}</h1>
+					) : (
+						<SidebarOptionName>{title}</SidebarOptionName>
+					)}
 				</SidebarOptionContainer>
-				<StyledArrow />
+				{showMenu ? <StyledArrowDown /> : <StyledArrowRight />}
 			</SidebarOptionContent>
 
-			<SidebarMenuOptions>
-				<h3>Teams</h3>
-				<h3>Knowledge Base</h3>
-				<h3>Training SAM</h3>
-				<h3>Help Center</h3>
-			</SidebarMenuOptions>
+			{showMenu && (
+				<SidebarMenuOptions>
+					{options.map((option) => (
+						<h3 className="sidebar__option">{option}</h3> //toDo: fix the option bug to select unic option per click
+					))}
+				</SidebarMenuOptions>
+			)}
 		</SidebarOption>
 	);
 };
@@ -26,13 +34,13 @@ const SidebarOptions = ({ Icon, title }) => {
 const SidebarOption = styled.div`
 	margin: 28px auto;
 	width: 221px;
-	cursor: pointer;
 `;
 
 const SidebarOptionContent = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	cursor: pointer;
 `;
 
 const SidebarOptionContainer = styled.div`
@@ -48,6 +56,14 @@ const SidebarOptionContainer = styled.div`
 		color: #696d8c;
 		font-family: "Gelion Regular", sans-serif;
 	}
+
+	> .sidebar__title {
+		color: #6837ef;
+	}
+
+	> .sidebar__icon {
+		color: #6837ef;
+	}
 `;
 
 const SidebarMenuOptions = styled.div`
@@ -59,12 +75,15 @@ const SidebarMenuOptions = styled.div`
 		line-height: 24px;
 		font-family: "Gelion Regular", sans-serif;
 		margin-left: 32px;
+		color: #696d8c;
 	}
 `;
 
-const StyledArrow = styled(MdKeyboardArrowRight)`
-	position: static;
-	left: 20.5%;
+const StyledArrowRight = styled(MdKeyboardArrowRight)`
+	color: #e5e4ef;
+`;
+
+const StyledArrowDown = styled(MdKeyboardArrowDown)`
 	color: #e5e4ef;
 `;
 

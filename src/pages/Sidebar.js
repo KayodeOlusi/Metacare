@@ -10,15 +10,25 @@ import UserInfo from "../components/sidebar/UserInfo";
 import SidebarOptions from "../components/sidebar/SidebarOptions";
 
 const Sidebar = () => {
+	const OPTIONS = ["Teams", "Knowledge Base", "Training SAM", "Help Center"];
+
 	return (
 		<SidebarContainer>
 			<UserInfo />
-			<SidebarOptions Icon={AiOutlineUsergroupDelete} title="Admin" />
-			<SidebarOptions Icon={CgCheckR} title="Knowledge Base" />
-			<SidebarOptions Icon={CgCheckR} title="Train SAM" />
-			<SidebarOptions Icon={CgBox} title="Agent Inbox" />
-			<SidebarOptions Icon={AiOutlineClockCircle} title="Help Center" />
-			<SidebarOptions Icon={HiOutlineChat} title="Analytics" />
+			<SidebarOptions
+				Icon={AiOutlineUsergroupDelete}
+				title="Admin"
+				options={OPTIONS}
+			/>
+			<SidebarOptions Icon={CgCheckR} title="Knowledge Base" options={OPTIONS} />
+			<SidebarOptions Icon={CgCheckR} title="Train SAM" options={OPTIONS} />
+			<SidebarOptions Icon={CgBox} title="Agent Inbox" options={OPTIONS} />
+			<SidebarOptions
+				Icon={AiOutlineClockCircle}
+				title="Help Center"
+				options={OPTIONS}
+			/>
+			<SidebarOptions Icon={HiOutlineChat} title="Analytics" options={OPTIONS} />
 		</SidebarContainer>
 	);
 };
