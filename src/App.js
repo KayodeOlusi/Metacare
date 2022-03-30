@@ -12,6 +12,7 @@ const App = () => {
 const AppBody = styled.div`
 	display: flex;
 	height: 100vh;
+	font-family: "Gelion", sans-serif;
 `;
 
 export default App;

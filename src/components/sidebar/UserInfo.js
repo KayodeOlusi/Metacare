@@ -25,6 +25,7 @@ const UserInformation = styled.div`
 		line-height: 22px;
 		color: #060213;
 		padding: 12px 47px 1px 57px;
+		font-family: "Gelion Bold", sans-serif;
 	}
 
 	> p {
@@ -33,6 +34,7 @@ const UserInformation = styled.div`
 		font-weight: 400;
 		color: #696d8c;
 		padding: 1px 35px 11px 57px;
+		font-family: "Gelion Regular", sans-serif;
 	}
 `;
 
