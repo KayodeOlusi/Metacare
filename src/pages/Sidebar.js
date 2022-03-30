@@ -28,6 +28,7 @@ const SidebarContainer = styled.div`
 	max-width: 262px;
 	height: 100vh;
 	border-right: 1px solid #ecebf5;
+	overflow-y: scroll;
 `;
 
 export default Sidebar;
