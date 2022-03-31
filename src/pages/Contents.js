@@ -1,11 +1,13 @@
 import styled from "styled-components";
 // Components
 import Header from "../components/contents/Header";
+import HeaderNavbar from "../components/contents/HeaderNavbar";
 
 const Contents = () => {
 	return (
 		<ContentsContainer>
 			<Header />
+			<HeaderNavbar />
 		</ContentsContainer>
 	);
 };

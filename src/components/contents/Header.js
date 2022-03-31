@@ -30,6 +30,7 @@ const Header = () => {
 const HeaderContainer = styled.div`
 	height: 78px;
 	display: flex;
+	position: sticky;
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid #ecebf5;
@@ -66,6 +67,7 @@ const HeaderIcons = styled.div`
 `;
 
 const HeaderNotification = styled.div`
+	height: 24px;
 	display: flex;
 	align-items: center;
 	border-right: 1px solid #ecebf5;

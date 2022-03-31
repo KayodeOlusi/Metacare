@@ -10,9 +10,9 @@ const SidebarOptions = ({ Icon, title, options }) => {
 		<SidebarOption>
 			<SidebarOptionContent onClick={() => setShowMenu(!showMenu)}>
 				<SidebarOptionContainer>
-					{Icon && <Icon className={showMenu && "sidebar__icon"} />}
+					{Icon && <Icon className={showMenu ? "sidebar__icon" : ""} />}
 					{Icon ? (
-						<h1 className={showMenu && "sidebar__title"}>{title}</h1>
+						<h1 className={showMenu ? "sidebar__title" : ""}>{title}</h1>
 					) : (
 						<SidebarOptionName>{title}</SidebarOptionName>
 					)}
