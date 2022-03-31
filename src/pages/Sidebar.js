@@ -39,6 +39,9 @@ const SidebarContainer = styled.div`
 	height: 100vh;
 	border-right: 1px solid #ecebf5;
 	overflow-y: scroll;
+	::-webkit-scrollbar {
+		display: none;
+	}
 `;
 
 export default Sidebar;
