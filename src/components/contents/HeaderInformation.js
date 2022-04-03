@@ -22,98 +22,116 @@ const HederInformation = () => {
 						<h3>Filter Options</h3>
 						<MdKeyboardArrowDown />
 					</HeaderInormationFilter>
-					<HeaderInformationExport>
-						<h3>Export</h3>
-					</HeaderInformationExport>
 				</HeaderInformationWidgets>
+
+				<hr />
+
+				<HeaderInformationExport>
+					<h3>Export</h3>
+				</HeaderInformationExport>
 			</HeaderInformationContents>
 		</HeaderInformationContainer>
 	);
 };
 
 const HeaderInformationContainer = styled.div`
-	display: flex;
-	align-items: center;
-	height: 110px;
-	font-family: "Gelion Semi Bold", sans-serif;
-	background-color: red;
+	width: 1024px;
+	margin: 0 auto;
+	padding: 20px 0px;
 `;
 
 const HeaderInformationContents = styled.div`
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+
+	> hr {
+		width: 20px;
+		transform: rotateZ(90deg);
+		border: 1px solid #ecebf5;
+	}
 `;
 
 const HeaderInformationText = styled.div`
-	margin-left: 40px;
+	font-family: "Gelion Semi Bold", sans-serif;
 
 	> h1 {
 		color: #060213;
 		font-size: 24px;
 		font-weight: 600;
 		line-height: 38.4px;
+		font-size: 24px;
+		line-height: 38.4px;
 	}
 `;
 
 const HeaderInformationWidgets = styled.div`
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-left: 124px;
+	justify-content: space-around;
 `;
 
 const HeaderInformationSearch = styled.div`
+	margin-left: 62px;
+	position: relative;
+
 	> input {
-		width: 300px;
+		width: 350px;
 		height: 44px;
 		border-radius: 8px;
-		border: 1px solid #e1e1eb;
-		outline: none;
-		background-color: #e1e1eb;
+		padding: 0px 0px 0px 48px;
 		font-size: 16px;
-		line-height: 24px;
-		color: #a3a3c2;
 		font-family: "Gelion Regular", sans-serif;
+		line-height: 24px;
+		outline: none;
+		border: 1px solid #e1e1eb;
 		font-weight: 400;
-		padding-left: 48px;
-		margin-right: 24px;
 	}
 
 	> .headerinfo__searchicon {
 		color: #a3a3c2;
+		z-index: 999;
+		position: absolute;
+		padding-left: 18px;
+		margin-right: -48px;
+		margin-top: 16px;
 	}
 `;
 
 const HeaderInormationFilter = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
 	width: 160px;
 	height: 44px;
-	border-radius: 8px;
-	border: 1px solid #e1e1eb;
+	font-family: "Gelion Regular", sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
-	color: #060213;
-	font-family: "Gelion Regular", sans-serif;
-	margin-right: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-left: 24px;
+	border: 1px solid #e1e1eb;
+	border-radius: 8px;
 `;
 
 const HeaderInformationExport = styled.div`
 	background-color: #25bb87;
+	border-radius: 8px;
 	width: 105px;
 	height: 44px;
-	border-radius: 8px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #fff;
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 400;
 	font-family: "Gelion Regular", sans-serif;
+	font-weight: 400;
+
+	> h3 {
+		font-size: 16px;
+		line-height: 24px;
+		color: #fff;
+	}
 `;
 
 export default HederInformation;

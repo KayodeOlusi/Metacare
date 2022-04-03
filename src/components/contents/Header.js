@@ -55,6 +55,7 @@ const HeaderSearch = styled.div`
 	> .header__searchicon {
 		color: #a3a3c2;
 		margin-left: -40px;
+		z-index: 999;
 	}
 `;
 
