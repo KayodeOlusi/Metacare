@@ -1,5 +1,6 @@
 import styled from "styled-components";
 // Components
+import Graph from "../components/contents/Graph";
 import Header from "../components/contents/Header";
 import HeaderNavbar from "../components/contents/HeaderNavbar";
 import HeaderInformation from "../components/contents/HeaderInformation";
@@ -10,6 +11,7 @@ const Contents = () => {
 			<Header />
 			<HeaderNavbar />
 			<HeaderInformation />
+			<Graph />
 		</ContentsContainer>
 	);
 };

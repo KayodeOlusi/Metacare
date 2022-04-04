@@ -33,7 +33,7 @@ const HederInformation = () => {
 };
 
 const HeaderInformationContainer = styled.div`
-	width: 1024px;
+	max-width: 1024px;
 	margin: 0 auto;
 	padding: 20px 0px;
 `;
