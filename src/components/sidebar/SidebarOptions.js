@@ -23,7 +23,7 @@ const SidebarOptions = ({ Icon, title, options }) => {
 			{showMenu && (
 				<SidebarMenuOptions>
 					{options.map((option) => (
-						<h3 className="sidebar__option">{option}</h3> //toDo: fix the option bug to select unic option per click
+						<h3 className="sidebar__option">{option}</h3>
 					))}
 				</SidebarMenuOptions>
 			)}
