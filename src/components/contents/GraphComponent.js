@@ -2,6 +2,7 @@ import styled from "styled-components";
 // Icons
 import { CgBox } from "react-icons/cg";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
+import GraphDiagram from "./GraphDiagram";
 
 const GraphComponent = () => {
 	return (
@@ -24,7 +25,7 @@ const GraphComponent = () => {
 					</GraphResultHeadingSpec>
 				</GraphResultHeading>
 
-				{/* {Graph component goes herr} */}
+				<GraphDiagram />
 			</GraphResult>
 
 			<GraphDetials>
@@ -51,16 +52,18 @@ const SingleGraphContainer = styled.div`
 const GraphResult = styled.div`
 	flex: 0.7;
 	padding: 0px 24px;
+	border-right: 1px solid #ecebf5;
 `;
 
 const GraphDetials = styled.div`
 	flex: 0.3;
-	border-left: 1px solid #ecebf5;
 `;
 
 const GraphResultHeading = styled.div`
 	display: flex;
 	justify-content: space-between;
+	padding-top: 15px;
+	padding-bottom: 5px;
 `;
 
 const GraphResultHeadingText = styled.div`

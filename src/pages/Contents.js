@@ -20,6 +20,7 @@ const ContentsContainer = styled.div`
 	flex: 0.7;
 	flex-grow: 1;
 	max-width: 1178px;
+	overflow-y: scroll;
 `;
 
 export default Contents;
