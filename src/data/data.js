@@ -25,7 +25,7 @@ export const AVERAGE_RESPONSE_TIME_DATA = {
 	labels,
 	datasets: [
 		{
-			data: [18, 48, 19, 42, 34],
+			data: [18, 48, 18, 42, 34, 42, 26, 34],
 			borderWidth: 2,
 			borderColor: "#F05D23",
 			backgroundColor: "rgba(255, 99, 132, 0.5)",
