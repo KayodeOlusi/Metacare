@@ -35,7 +35,7 @@ const HederInformation = () => {
 const HeaderInformationContainer = styled.div`
 	max-width: 1024px;
 	margin: 0 auto;
-	padding: 20px 0px;
+	padding: 31px 0px;
 `;
 
 const HeaderInformationContents = styled.div`
