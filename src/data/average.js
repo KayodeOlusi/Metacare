@@ -21,6 +21,8 @@ ChartJS.register(
 
 const labels = ["Jan", "Feb", "March", "Apr", "May", "Jun", "Jul", "Aug"];
 
+export const AVERAGE_COLOR = "#F05D23";
+
 export const AVERAGE_RESPONSE_TIME_DATA = {
 	labels,
 	datasets: [
@@ -28,12 +30,12 @@ export const AVERAGE_RESPONSE_TIME_DATA = {
 			data: [18, 48, 18, 42, 34, 42, 26, 34],
 			borderWidth: 2,
 			borderColor: "#F05D23",
-			backgroundColor: "rgba(255, 99, 132, 0.5)",
+			backgroundColor: "#ffffff",
 		},
 	],
 };
 
-export const OPTIONS = {
+export const AVERAGE_OPTIONS = {
 	responsive: true,
 	maintainAspectRatio: false,
 	plugins: {

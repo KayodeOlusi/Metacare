@@ -33,9 +33,13 @@ const HederInformation = () => {
 };
 
 const HeaderInformationContainer = styled.div`
-	max-width: 1024px;
+	max-width: 928px;
 	margin: 0 auto;
 	padding: 31px 0px;
+
+	@media (min-width: 1300px) {
+		max-width: 1024px;
+	}
 `;
 
 const HeaderInformationContents = styled.div`
@@ -61,6 +65,14 @@ const HeaderInformationText = styled.div`
 		font-weight: 600;
 		line-height: 38.4px;
 		line-height: 38.4px;
+	}
+
+	@media (min-width: 1281px) {
+		h1 {
+			font-size: 22px;
+			line-height: 20px;
+			margin-left: 0px;
+		}
 	}
 `;
 
@@ -94,6 +106,13 @@ const HeaderInformationSearch = styled.div`
 		padding-left: 18px;
 		margin-right: -48px;
 	}
+
+	@media (min-width: 1024px) and (max-width: 1280px) {
+		input {
+			width: 200px;
+			font-size: 14px;
+		}
+	}
 `;
 
 const HeaderInormationFilter = styled.div`
@@ -109,6 +128,11 @@ const HeaderInormationFilter = styled.div`
 	justify-content: space-around;
 	border: 1px solid #e1e1eb;
 	font-family: "Gelion Regular", sans-serif;
+
+	@media (max-width: 1024px) {
+		width: 120px;
+		font-size: 12px;
+	}
 `;
 
 const HeaderInformationExport = styled.div`
@@ -129,6 +153,12 @@ const HeaderInformationExport = styled.div`
 		color: #fff;
 		font-size: 16px;
 		line-height: 24px;
+	}
+
+	@media (max-width: 1024px) {
+		width: 90px;
+		font-size: 12px;
+		margin-right: 40px;
 	}
 `;
 

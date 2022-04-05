@@ -3,7 +3,7 @@ import styled from "styled-components";
 // Icons
 import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 
-const SidebarOptions = ({ Icon, title, options }) => {
+const SidebarOptions = ({ Icon, title }) => {
 	const [showMenu, setShowMenu] = useState(false);
 
 	return (
@@ -22,9 +22,10 @@ const SidebarOptions = ({ Icon, title, options }) => {
 
 			{showMenu && (
 				<SidebarMenuOptions>
-					{options.map((option) => (
-						<h3 className="sidebar__option">{option}</h3>
-					))}
+					<h3 className="active">Teams</h3>
+					<h3>Knowledge Base</h3>
+					<h3>Training SAM</h3>
+					<h3>Help Center</h3>
 				</SidebarMenuOptions>
 			)}
 		</SidebarOption>
@@ -76,6 +77,11 @@ const SidebarMenuOptions = styled.div`
 		font-family: "Gelion Regular", sans-serif;
 		margin-left: 32px;
 		color: #696d8c;
+	}
+
+	> .active {
+		color: #060213;
+		font-weight: 400;
 	}
 `;
 

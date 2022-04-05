@@ -4,7 +4,7 @@ import { CgBox } from "react-icons/cg";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
 import GraphDiagram from "./GraphDiagram";
 
-const GraphComponent = () => {
+const GraphComponent = ({ options, data, color }) => {
 	return (
 		<SingleGraphContainer>
 			<GraphResult>
@@ -15,7 +15,13 @@ const GraphComponent = () => {
 					</GraphResultHeadingText>
 
 					<GraphResultHeadingSpec>
-						<MdCheckBoxOutlineBlank className="graph__emptybox" />
+						<MdCheckBoxOutlineBlank
+							className="graph__emptybox"
+							style={{
+								color,
+								backgroundColor: color,
+							}}
+						/>
 						<h3>High Priority</h3>
 						<hr />
 						<GraphMonth>
@@ -25,7 +31,7 @@ const GraphComponent = () => {
 					</GraphResultHeadingSpec>
 				</GraphResultHeading>
 
-				<GraphDiagram />
+				<GraphDiagram options={options} data={data} />
 			</GraphResult>
 
 			<GraphDetials>
@@ -47,9 +53,13 @@ const GraphComponent = () => {
 const SingleGraphContainer = styled.div`
 	display: flex;
 	align-items: center;
-	margin-bottom: 10px;
+	margin-bottom: 24px;
 	border-radius: 8px;
 	border: 1px solid #ecebf5;
+
+	@media (min-width: 1024px) and (max-width: 1280px) {
+		margin: 0px 40px 24px 40px;
+	}
 `;
 
 const GraphResult = styled.div`
@@ -111,9 +121,7 @@ const GraphResultHeadingSpec = styled.div`
 	> .graph__emptybox {
 		width: 10px;
 		height: 10px;
-		color: #f05d23;
 		border-radius: 2px;
-		background-color: #f05d23;
 	}
 
 	> hr {

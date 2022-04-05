@@ -1,13 +1,12 @@
 import styled from "styled-components";
 // Component
 import { Line } from "react-chartjs-2";
-import { AVERAGE_RESPONSE_TIME_DATA, OPTIONS } from "../../data/data";
 
-const GraphDiagram = () => {
+const GraphDiagram = ({ options, data }) => {
 	return (
 		<GraphDiagramContaier>
 			<Chart>
-				<Line options={OPTIONS} data={AVERAGE_RESPONSE_TIME_DATA} />
+				<Line options={options} data={data} />
 			</Chart>
 		</GraphDiagramContaier>
 	);
@@ -19,6 +18,10 @@ const GraphDiagramContaier = styled.div`
 
 const Chart = styled.div`
 	height: 220px;
+
+	@media (min-width: 1024px) and (max-width: 1280px) {
+		width: 600px;
+	}
 `;
 
 export default GraphDiagram;
