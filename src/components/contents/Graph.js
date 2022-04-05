@@ -5,6 +5,9 @@ const Graph = () => {
 	return (
 		<GraphContainer>
 			<GraphComponent />
+			<GraphComponent />
+			<GraphComponent />
+			<GraphComponent />
 		</GraphContainer>
 	);
 };
@@ -12,8 +15,6 @@ const Graph = () => {
 const GraphContainer = styled.div`
 	max-width: 1024px;
 	margin: 0 auto;
-	border: 1px solid #ecebf5;
-	border-radius: 8px;
 `;
 
 export default Graph;

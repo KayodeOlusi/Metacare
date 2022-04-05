@@ -35,6 +35,7 @@ export const AVERAGE_RESPONSE_TIME_DATA = {
 
 export const OPTIONS = {
 	responsive: true,
+	maintainAspectRatio: false,
 	plugins: {
 		legend: {
 			display: false,
@@ -43,6 +44,35 @@ export const OPTIONS = {
 		title: {
 			display: false,
 			text: "Line Chart",
+		},
+	},
+	scales: {
+		y: {
+			beginAtZero: false,
+			position: "left",
+			grid: {
+				drawBorder: false,
+			},
+			ticks: {
+				color: "#696D8C",
+				padding: 10,
+				precision: 0,
+				stepSize: 10,
+				font: { size: 14, family: "'Gelion', sans-serif" },
+			},
+		},
+		x: {
+			grid: {
+				display: false,
+				drawBorder: false,
+			},
+			ticks: {
+				color: "#696D8C",
+				padding: 8,
+				font: {
+					family: "'Gelion', sans-serif",
+				},
+			},
 		},
 	},
 };
