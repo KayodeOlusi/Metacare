@@ -118,12 +118,13 @@ export const HeaderNavbarLinks = styled.div`
 
 // Header Information
 export const HeaderInformationContainer = styled.div`
-	max-width: 928px;
+	max-width: 1024px;
 	margin: 0 auto;
 	padding: 31px 0px;
 
-	@media (min-width: 1300px) {
-		max-width: 1018px;
+	@media (min-width: 1024px) and (max-width: 1280px) {
+		max-width: 100%;
+		margin: 0px 40px 0px 40px;
 	}
 `;
 
