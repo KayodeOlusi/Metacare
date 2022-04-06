@@ -1,4 +1,3 @@
-import styled from "styled-components";
 // Data
 import {
 	AVERAGE_RESPONSE_TIME_DATA,
@@ -22,6 +21,8 @@ import {
 } from "../../data/contact";
 // Components
 import GraphComponent from "./GraphComponent";
+//Styles
+import { GraphContainer } from "../../styles/Content";
 
 const Graph = () => {
 	return (
@@ -49,14 +50,5 @@ const Graph = () => {
 		</GraphContainer>
 	);
 };
-
-const GraphContainer = styled.div`
-	max-width: 1024px;
-	margin: 0 auto;
-
-	@media (max-width: 1024px) {
-		margin: 0px 40px 0px 40px;
-	}
-`;
 
 export default Graph;

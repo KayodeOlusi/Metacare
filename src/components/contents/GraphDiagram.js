@@ -1,6 +1,7 @@
-import styled from "styled-components";
 // Component
 import { Line } from "react-chartjs-2";
+// Styles
+import { Chart, GraphDiagramContaier } from "../../styles/Content";
 
 const GraphDiagram = ({ options, data }) => {
 	return (
@@ -11,17 +12,5 @@ const GraphDiagram = ({ options, data }) => {
 		</GraphDiagramContaier>
 	);
 };
-
-const GraphDiagramContaier = styled.div`
-	padding-bottom: 12px;
-`;
-
-const Chart = styled.div`
-	height: 220px;
-
-	@media (min-width: 1024px) and (max-width: 1280px) {
-		width: 600px;
-	}
-`;
 
 export default GraphDiagram;

@@ -1,4 +1,3 @@
-import styled from "styled-components";
 // Icons
 import { CgBox } from "react-icons/cg";
 import { CgCheckR } from "react-icons/cg";
@@ -8,6 +7,8 @@ import { AiOutlineUsergroupDelete } from "react-icons/ai";
 // Components
 import UserInfo from "../components/sidebar/UserInfo";
 import SidebarOptions from "../components/sidebar/SidebarOptions";
+// Styles
+import { SidebarContainer } from "../styles/Sidebar";
 
 const Sidebar = () => {
 	return (
@@ -22,16 +23,5 @@ const Sidebar = () => {
 		</SidebarContainer>
 	);
 };
-
-const SidebarContainer = styled.div`
-	flex: 0.3;
-	max-width: 262px;
-	height: 100vh;
-	border-right: 1px solid #ecebf5;
-	overflow-y: scroll;
-	::-webkit-scrollbar {
-		display: none;
-	}
-`;
 
 export default Sidebar;

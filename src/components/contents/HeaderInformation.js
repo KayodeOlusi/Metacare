@@ -1,7 +1,16 @@
-import styled from "styled-components";
 // Icons
 import { FiSearch } from "react-icons/fi";
 import { MdKeyboardArrowDown } from "react-icons/md";
+// Styles
+import {
+	HeaderInformationContainer,
+	HeaderInformationContents,
+	HeaderInformationExport,
+	HeaderInformationSearch,
+	HeaderInformationText,
+	HeaderInformationWidgets,
+	HeaderInormationFilter,
+} from "../../styles/Content";
 
 const HederInformation = () => {
 	return (
@@ -31,135 +40,5 @@ const HederInformation = () => {
 		</HeaderInformationContainer>
 	);
 };
-
-const HeaderInformationContainer = styled.div`
-	max-width: 928px;
-	margin: 0 auto;
-	padding: 31px 0px;
-
-	@media (min-width: 1300px) {
-		max-width: 1024px;
-	}
-`;
-
-const HeaderInformationContents = styled.div`
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-
-	> hr {
-		width: 20px;
-		transform: rotateZ(90deg);
-		border: 1px solid #ecebf5;
-	}
-`;
-
-const HeaderInformationText = styled.div`
-	font-family: "Gelion Semi Bold", sans-serif;
-
-	> h1 {
-		color: #060213;
-		font-size: 24px;
-		font-size: 24px;
-		font-weight: 600;
-		line-height: 38.4px;
-		line-height: 38.4px;
-	}
-
-	@media (min-width: 1281px) {
-		h1 {
-			font-size: 22px;
-			line-height: 20px;
-			margin-left: 0px;
-		}
-	}
-`;
-
-const HeaderInformationWidgets = styled.div`
-	display: flex;
-	justify-content: space-around;
-`;
-
-const HeaderInformationSearch = styled.div`
-	margin-left: 62px;
-	position: relative;
-
-	> input {
-		outline: none;
-		width: 350px;
-		height: 44px;
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 24px;
-		border-radius: 8px;
-		padding: 0px 0px 0px 48px;
-		font-family: "Gelion Regular", sans-serif;
-		border: 1px solid #e1e1eb;
-	}
-
-	> .headerinfo__searchicon {
-		z-index: 999;
-		color: #a3a3c2;
-		margin-top: 16px;
-		position: absolute;
-		padding-left: 18px;
-		margin-right: -48px;
-	}
-
-	@media (min-width: 1024px) and (max-width: 1280px) {
-		input {
-			width: 200px;
-			font-size: 14px;
-		}
-	}
-`;
-
-const HeaderInormationFilter = styled.div`
-	width: 160px;
-	height: 44px;
-	display: flex;
-	font-size: 16px;
-	line-height: 24px;
-	border-radius: 8px;
-	font-weight: 400;
-	margin-left: 24px;
-	align-items: center;
-	justify-content: space-around;
-	border: 1px solid #e1e1eb;
-	font-family: "Gelion Regular", sans-serif;
-
-	@media (max-width: 1024px) {
-		width: 120px;
-		font-size: 12px;
-	}
-`;
-
-const HeaderInformationExport = styled.div`
-	width: 105px;
-	height: 44px;
-	display: flex;
-	font-size: 16px;
-	font-weight: 400;
-	font-weight: 400;
-	line-height: 24px;
-	border-radius: 8px;
-	align-items: center;
-	justify-content: center;
-	background-color: #25bb87;
-	font-family: "Gelion Regular", sans-serif;
-
-	> h3 {
-		color: #fff;
-		font-size: 16px;
-		line-height: 24px;
-	}
-
-	@media (max-width: 1024px) {
-		width: 90px;
-		font-size: 12px;
-		margin-right: 40px;
-	}
-`;
 
 export default HederInformation;
