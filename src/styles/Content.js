@@ -123,7 +123,7 @@ export const HeaderInformationContainer = styled.div`
 	padding: 31px 0px;
 
 	@media (min-width: 1300px) {
-		max-width: 1024px;
+		max-width: 1018px;
 	}
 `;
 
@@ -309,7 +309,7 @@ export const GraphResultHeadingText = styled.div`
 		font-size: 12px;
 		font-weight: 600;
 		line-height: 20px;
-		font-family: "Gelion Regular", sans-serif; // change the font to inter
+		font-family: "Gelion Regular", sans-serif;
 	}
 `;
 
